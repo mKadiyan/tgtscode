@@ -1,9 +1,9 @@
-headerpane > div > form.navbar-right
+#headerpane > div > form.navbar-right
 {
     margin-right: 100px;
 }
 
-toppane > div > div >  pre
+#toppane > div > pre
 {
     background-color: #5cb85c;
     text-align: center;
@@ -16,24 +16,28 @@ toppane > div > div >  pre
 {
     background-color: red;
 }
-
-leftpane > div
+#leftpane
+{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#leftpane > div
 {
     border: 1px solid;
 }
-middlepane > div
+#middlepane > div
 {
     border: 1px solid;
 }
-rightpane > div
+#rightpane > div
 {
     border: 1px solid;
 }
-footerpane > div
+#footerpane > div
 {
     border: 1px solid;
 }
-toppane > div
+#toppane > div
 {
     border: 1px solid;
 }

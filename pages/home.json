@@ -1,0 +1,14 @@
+[
+    {
+        "imageUrl": "img/1.jpg",
+        "name": "CSS Introduction"
+    },
+    {
+        "imageUrl": "img/2.jpg",
+        "name": "CSS Styles"
+    },
+    {
+        "imageUrl": "img/3.jpg",
+        "name": "CSS More"
+    }
+]

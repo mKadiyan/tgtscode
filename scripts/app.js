@@ -2,21 +2,21 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('mehar', [
-  'ngRoute'
+var mehar = angular.module('mehar', [
+  'ngRoute',
+  'meharControllers',
+  'meharServices'
 ]);
 
-phonecatApp.config(['$routeProvider',
+mehar.config(['$routeProvider',
   function($routeProvider) {
     console.log('in route provider');
     $routeProvider.
-      when('/home', {
-          controller: 'scripts/topPaneController'
+      when('/:page1', {
+          templateUrl: 'templates/blankTemplate.html',
+          controller: 'TopPaneController'
       }).
-        when('#/', {
-          controller: 'scripts/topPaneController'
-        }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   }]);
