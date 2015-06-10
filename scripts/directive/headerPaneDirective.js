@@ -4,7 +4,7 @@
             return {
                 restrict : 'E',
                 templateUrl: './templates/headerPaneTemplate.html',
-                controller: 'headerPaneController'
+                //controller: 'headerPaneController'
             };
         });
 })();

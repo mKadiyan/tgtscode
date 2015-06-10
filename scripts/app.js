@@ -3,24 +3,20 @@
 /* App Module */
 
 var phonecatApp = angular.module('mehar', [
-  'ngRoute',
-  'phonecatControllers',
-  'phonecatFilters',
-  'phonecatServices'
+  'ngRoute'
 ]);
 
 phonecatApp.config(['$routeProvider',
   function($routeProvider) {
+    console.log('in route provider');
     $routeProvider.
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
+      when('/home', {
+          controller: 'scripts/topPaneController'
       }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
-      }).
+        when('#/', {
+          controller: 'scripts/topPaneController'
+        }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/'
       });
   }]);

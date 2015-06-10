@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mehar">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -10,8 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+
     <script src="scripts/directive/headerPaneDirective.js"></script>
-    <script src="scripts/controller/headerPaneController.js"></script>
     <script src="scripts/directive/topPaneDirective.js"></script>
     <script src="scripts/controller/topPaneController.js"></script>
     <script src="scripts/directive/leftPaneDirective.js"></script>
@@ -22,10 +23,11 @@
     <script src="scripts/controller/rightPaneController.js"></script>
     <script src="scripts/directive/footerPaneDirective.js"></script>
     <script src="scripts/controller/footerPaneController.js"></script>
+    <!--<script src="scripts/app.js"></script>-->
 
 </head>
 
-<body class="container-fluid" ng-app="mehar">
+<body class="container-fluid">
     <headerpane></headerpane>
     <toppane></toppane>
     <div class="row">
@@ -33,7 +35,8 @@
         <middlepane></middlepane>
         <rightpane></rightpane>
     </div>
-    <footerpane></footerpane>
+    <footerpane>
+    </footerpane>
 
 </body>
 

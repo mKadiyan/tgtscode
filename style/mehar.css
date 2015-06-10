@@ -1,11 +1,22 @@
-toppane > div > p
+headerpane > div > form.navbar-right
+{
+    margin-right: 100px;
+}
+
+toppane > div > div >  pre
 {
     background-color: #5cb85c;
+    text-align: center;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    font-size: medium;
+    color: brown;
 }
-toppane > div
+
+.nav-tabs > .active > a
 {
-    border: 1px solid;
+    background-color: red;
 }
+
 leftpane > div
 {
     border: 1px solid;
