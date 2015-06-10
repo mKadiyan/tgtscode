@@ -1,26 +1,26 @@
 [
     {
         "imageUrl": "img/1.jpg",
-        "name": "Home Introduction"
+        "name": "CSS Introduction"
     },
     {
         "imageUrl": "img/2.jpg",
-        "name": "Home Styles"
+        "name": "CSS Styles"
     },
     {
         "imageUrl": "img/3.jpg",
-        "name": "Home More"
+        "name": "CSS More"
     },
     {
         "imageUrl": "img/1.jpg",
-        "name": "Home More2"
+        "name": "CSS More2"
     },
     {
         "imageUrl": "img/2.jpg",
-        "name": "Home Styles"
+        "name": "CSS Styles"
     },
     {
         "imageUrl": "img/3.jpg",
-        "name": "Home More3"
+        "name": "CSS More3"
     }
 ]

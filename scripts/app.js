@@ -5,7 +5,8 @@
 var mehar = angular.module('mehar', [
   'ngRoute',
   'meharControllers',
-  'meharServices'
+  'meharServices',
+  'MainControllers'
 ]);
 
 mehar.config(['$routeProvider',
