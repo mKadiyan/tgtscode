@@ -45,8 +45,8 @@
         <div class="col-dm-12">
             <ul class="nav nav-tabs">
                 <li>
-                    <a data-toggle="tab" href="#/home">Home</a></li>
-                <li><a data-toggle="tab" href="#/menu1">Menu 1</a></li>
+                    <a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#css">Css</a></li>
             </ul>
         </div>
     </div>
@@ -56,15 +56,15 @@
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
                     <h3>Home Data</h3>
-                    <ul ng-repeat="content in contents">
+                    <ul ng-repeat="content in contents | orderBy:orderField">
                         <!--<li class="active"><a data-toggle="tab" href="#homedata1">Home Data1</a></li>-->
-                        <li><a data-toggle="tab" href="#homedata2">{{content.name}}</a></li>
+                        <li><a data-toggle="tab" href="#/{{topic}}/{{content.link}}">{{content.name}}</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div id="moddlepane" class="col-md-8" style="background-color:pink">
+        <div id="moddlepane" class="col-md-8">
             <div class="tab-content">
                 <div id="homedata1" class="tab-pane fade in active">
                     <p>I am homedata1</p>
@@ -98,7 +98,7 @@
         </div>
     </div>
 
-    <div id="footerpane" class="row" style="background-color:#FFCCCC;height :200px">
+    <div id="footerpane" class="row" style="background-color:#FFCCCC">
         <div class="col-md-2">
             <p>Author : Phenom</p>
             <img src="img/author.jpg" class="img-rounded" alt="Cinque Terre" width="100" height="100">

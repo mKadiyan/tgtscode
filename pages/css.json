@@ -1,26 +1,38 @@
 [
     {
+        "position": 1,
         "imageUrl": "img/1.jpg",
-        "name": "CSS Introduction"
+        "name": "Css Introduction",
+        "link": "css_introduction"
     },
     {
+        "position": 2,
         "imageUrl": "img/2.jpg",
-        "name": "CSS Styles"
+        "name": "Css Styles",
+        "link": "css_styles"
     },
     {
+        "position": 3,
         "imageUrl": "img/3.jpg",
-        "name": "CSS More"
+        "name": "Css More",
+        "link": "css_more"
     },
     {
+        "position": 4,
         "imageUrl": "img/1.jpg",
-        "name": "CSS More2"
+        "name": "Css More1",
+        "link": "css_more1"
     },
     {
+        "position": 5,
         "imageUrl": "img/2.jpg",
-        "name": "CSS Styles"
+        "name": "Css More2",
+        "link": "css_more2"
     },
     {
+        "position": 6,
         "imageUrl": "img/3.jpg",
-        "name": "CSS More3"
+        "name": "Css More3",
+        "link": "css_more3"
     }
 ]

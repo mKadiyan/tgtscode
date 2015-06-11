@@ -1,6 +1,6 @@
 #headerpane > div > form.navbar-right
 {
-    margin-right: 100px;
+    margin-right: 10px;
 }
 
 #toppane > div > pre
@@ -23,23 +23,23 @@
 }
 #leftpane > div
 {
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 #middlepane > div
 {
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 #rightpane > div
 {
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 #footerpane > div
 {
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 #toppane > div
 {
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 .modal-header, h4, .close
 {

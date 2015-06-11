@@ -1,26 +1,38 @@
 [
     {
+        "position": 1,
         "imageUrl": "img/1.jpg",
-        "name": "Home Introduction"
+        "name": "Home Introduction",
+        "link": "home_introduction"
     },
     {
+        "position": 2,
         "imageUrl": "img/2.jpg",
-        "name": "Home Styles"
+        "name": "Home Styles",
+        "link": "home_styles"
     },
     {
+        "position": 3,
         "imageUrl": "img/3.jpg",
-        "name": "Home More"
+        "name": "Home More",
+        "link": "home_more"
     },
     {
+        "position": 4,
         "imageUrl": "img/1.jpg",
-        "name": "Home More2"
+        "name": "Home More1",
+        "link": "home_more"
     },
     {
+        "position": 5,
         "imageUrl": "img/2.jpg",
-        "name": "Home Styles"
+        "name": "Home More2",
+        "link": "home_more"
     },
     {
+        "position": 6,
         "imageUrl": "img/3.jpg",
-        "name": "Home More3"
+        "name": "Home More3",
+        "link": "home_more"
     }
 ]
