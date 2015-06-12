@@ -13,11 +13,15 @@ mehar.config(['$routeProvider',
   function($routeProvider) {
     console.log('in route provider');
     $routeProvider.
+        when('/', {
+          templateUrl: 'templates/blankTemplate.html',
+          controller: 'TopPaneController'
+        }).
         when('/:page1', {
           templateUrl: 'templates/blankTemplate.html',
           controller: 'TopPaneController'
         }).
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/'
       });
   }]);

@@ -1,0 +1,38 @@
+[
+    {
+        "position": 1,
+        "imageUrl": "img/1.jpg",
+        "name": "Others Introduction",
+        "link": "Others_introduction"
+    },
+    {
+        "position": 2,
+        "imageUrl": "img/2.jpg",
+        "name": "Others Styles",
+        "link": "Others_styles"
+    },
+    {
+        "position": 3,
+        "imageUrl": "img/3.jpg",
+        "name": "Others More",
+        "link": "Others_more"
+    },
+    {
+        "position": 4,
+        "imageUrl": "img/1.jpg",
+        "name": "Others More1",
+        "link": "Others_more1"
+    },
+    {
+        "position": 5,
+        "imageUrl": "img/2.jpg",
+        "name": "Others More2",
+        "link": "Others_more2"
+    },
+    {
+        "position": 6,
+        "imageUrl": "img/3.jpg",
+        "name": "Others More3",
+        "link": "Others_more3"
+    }
+]
