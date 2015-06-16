@@ -29,7 +29,6 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
     else
     {
       $("#leftpane").show();
-      console.log('I am here in controller  = '+$routeParams.page1);
       angular.element("#leftpane").scope().topic = $routeParams.page1;
       angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1});
     }

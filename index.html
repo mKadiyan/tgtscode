@@ -18,6 +18,14 @@
     <script src="scripts/services.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/shared.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#leftpane ul li a').click(function (ev) {
+                $('#leftpane ul li').removeClass('selected');
+                $(ev.currentTarget).parent('li').addClass('selected');
+            });
+        });
+    </script>
 
 </head>
 
@@ -46,7 +54,7 @@
             <ul class="nav nav-tabs">
                 <li><a data-toggle="tab" href="#home">Home</a></li>
                 <li><a data-toggle="tab" href="#css">Css</a></li>
-                <li><a data-toggle="tab" href="#angular">Angular</a></li>
+                <li><a data-toggle="tab" href="#angularjs">Angular</a></li>
                 <li><a data-toggle="tab" href="#bootstrap">Bootstrap</a></li>
                 <li><a data-toggle="tab" href="#jquery">Jquery</a></li>
                 <li><a data-toggle="tab" href="#bower">Bower</a></li>
@@ -58,49 +66,20 @@
 
     <div class="row">
         <div  id="leftpane" class="row col-md-2" ng-controller="leftPaneController">
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <ul ng-repeat="content in contents | orderBy:orderField">
-                        <li><a data-toggle="tab" href="#/{{topic}}/{{content.link}}">{{content.name}}</a></li>
-                    </ul>
-                </div>
-            </div>
+                <ul class="nav" ng-repeat="content in contents | orderBy:orderField">
+                    <li><a  ng-click ='display(topic,content.link)'>{{content.name}}</a></li>
+         </ul>
         </div>
 
         <div id="middlepane" class="col-md-8">
-            <div class="tab-content">
-                <div id="homedata1" class="tab-pane fade in active">
-                    <p>I am homedata1</p>
-                </div>
-                <div id="homedata2" class="tab-pane fade ">
-                    <p>I am homedata2</p>
-                </div>
-                <div id="homedata3" class="tab-pane fade ">
-                    <p>I am homedata3</p>
-                </div>
-                <div id="homedata4" class="tab-pane fade ">
-                    <p>I am homedata4</p>
-                </div>
-                <div id="menu1data1" class="tab-pane fade ">
-                    <p>I am menu1data1</p>
-                </div>
-                <div id="menu1data2" class="tab-pane fade ">
-                    <p>I am menu1data2</p>
-                </div>
-                <div id="menu1data3" class="tab-pane fade ">
-                    <p>I am menu1data3</p>
-                </div>
-                <div id="menu1data4" class="tab-pane fade ">
-                    <p>I am menu1data4</p>
-                </div>
-            </div>
+
         </div>
 
         <div id="rightpane" class="col-md-2" >
-            I am right template
+
         </div>
     </div>
-    <div id="footerpane" class="row" style="background-color:lightgray">
+    <div id="footerpane" class="row" >
         <div class="col-md-2">
             <p>Author : Phenom</p>
             <img src="img/author.jpg" class="img-rounded" alt="Cinque Terre" width="100" height="100">
