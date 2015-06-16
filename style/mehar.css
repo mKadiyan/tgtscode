@@ -9,7 +9,43 @@
     text-align: center;
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
     font-size: medium;
-    color: brown;
+    /*color: brown;*/
+}
+
+
+#homecontent figure {
+    display: inline-block;
+    border:1px solid grey;
+    position: relative;
+    margin: 5px;
+
+
+}
+
+#homecontent figure:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+#homecontent figure {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#homecontent figure a{
+    text-decoration: none;
+    text-align: center;
+}
+
+#homecontent figure .thumbnail{
+    float: none;
+    margin: 5px;
+    margin-bottom: 0px;
+}
+
+#homecontent
+{
+    padding: 5% 10% ;
+    margin: 20px 20px;
 }
 
 .nav-tabs > .active > a
@@ -19,19 +55,22 @@
 #leftpane
 {
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left: 25px;
+    border-right: 1px solid;
 }
 #leftpane > div
 {
     /*border: 1px solid;*/
 }
-#middlepane > div
+#middlepane
 {
-    /*border: 1px solid;*/
+
 }
-#rightpane > div
+#rightpane
 {
-    /*border: 1px solid;*/
+    padding-right: 20px;
+    padding-left: 0px;
+    border-left: 1px solid;
 }
 #footerpane > div
 {
@@ -48,8 +87,11 @@
     text-align: center;
     font-size: 30px;
 }
-.modal-footer {
-    background-color: #f9f9f9;
-}
+
+
+
+
+
+
 
 

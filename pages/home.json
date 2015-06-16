@@ -1,38 +1,44 @@
 [
     {
         "position": 1,
-        "imageUrl": "img/1.jpg",
-        "name": "Home Introduction",
-        "link": "home_introduction"
+        "imageUrl": "img/angular.jpg",
+        "name": "Angular JS",
+        "id": "angularjs",
+        "description": "Angular JS"
     },
     {
         "position": 2,
-        "imageUrl": "img/2.jpg",
-        "name": "Home Styles",
-        "link": "home_styles"
+        "imageUrl": "img/css.png",
+        "name": "Css",
+        "id": "css",
+        "description": "CSS Styles"
     },
     {
         "position": 3,
-        "imageUrl": "img/3.jpg",
-        "name": "Home More",
-        "link": "home_more"
+        "imageUrl": "img/bootstrap.jpg",
+        "name": "Bootstrap",
+        "id": "bootstrap",
+        "description": "Bootstrap css"
     },
     {
         "position": 4,
-        "imageUrl": "img/1.jpg",
-        "name": "Home More1",
-        "link": "home_more"
+        "imageUrl": "img/jquery.jpg",
+        "name": "JQuery",
+        "id": "jquery",
+        "description": "JQuery"
     },
     {
         "position": 5,
-        "imageUrl": "img/2.jpg",
-        "name": "Home More2",
-        "link": "home_more"
+        "imageUrl": "img/bower.jpg",
+        "name": "Bower",
+        "id": "bower",
+        "description": "Bower front end package manager"
     },
     {
         "position": 6,
-        "imageUrl": "img/3.jpg",
-        "name": "Home More3",
-        "link": "home_more"
+        "imageUrl": "img/npm.png",
+        "name": "Npm",
+        "id": "npm",
+        "description": "Npm : Nodejs package manager"
     }
 ]

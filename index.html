@@ -22,7 +22,7 @@
 </head>
 
 <body class="container-fluid">
-<ng-view></ng-view>
+    <ng-view></ng-view>
     <div id="headerpane" class="row">
         <form class="navbar-form navbar-right" role="search" action="http://www.google.com/search" target="_blank" method="get">
             <div class="form-group">
@@ -56,8 +56,8 @@
         </div>
     </div>
 
-    <div class="row" id="leftpane" ng-controller="leftPaneController">
-        <div  class="col-md-2" style="background-color:light-grey">
+    <div class="row">
+        <div  id="leftpane" class="row col-md-2" ng-controller="leftPaneController">
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
                     <h3>Home Data</h3>
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div id="moddlepane" class="col-md-8">
+        <div id="middlepane" class="col-md-8">
             <div class="tab-content">
                 <div id="homedata1" class="tab-pane fade in active">
                     <p>I am homedata1</p>
@@ -98,12 +98,11 @@
             </div>
         </div>
 
-        <div id="rightpane" class="col-md-2" style="background-color:light-blue;height :300px">
+        <div id="rightpane" class="col-md-2" >
             I am right template
         </div>
     </div>
-
-    <div id="footerpane" class="row" style="background-color:#FFCCCC">
+    <div id="footerpane" class="row" style="background-color:lightgray">
         <div class="col-md-2">
             <p>Author : Phenom</p>
             <img src="img/author.jpg" class="img-rounded" alt="Cinque Terre" width="100" height="100">

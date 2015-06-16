@@ -8,14 +8,27 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
   function($scope, $routeParams, Page, Tabs) {
     $scope.contents={};
     console.log('controller '+$routeParams.page1);
-    if($routeParams.page1 === undefined)
+    if($routeParams.page1 === undefined || $routeParams.page1 === 'home')
     {
-      console.log('I am here in controller  undefined '+$routeParams.page1);
-      angular.element("#leftpane").scope().topic = 'home';
-      angular.element("#leftpane").scope().contents = Page.query();
+      console.log('I am here in controller  undefined-home '+$routeParams.page1);
+      var data = Page.query(function(data)
+      {
+        var text = '<div id="homecontent">';
+        for (var i = 0; i < data.length; i++) {
+            text +='<figure style="display: inline-block"><a href="#'+data[i].id+'"><img class="thumbnail" src="'
+            text +=data[i].imageUrl+'" width="108px" height="90px">';
+            text +='<figcaption>'+data[i].name+'</figcaption></a></figure>';
+        }
+        text += "</div>"
+        console.log(text);
+        $("#middlepane").html (text);
+        $("#leftpane").hide();
+      });
+
     }
     else
     {
+      $("#leftpane").show();
       console.log('I am here in controller  = '+$routeParams.page1);
       angular.element("#leftpane").scope().topic = $routeParams.page1;
       angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1});
