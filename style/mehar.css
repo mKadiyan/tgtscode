@@ -17,7 +17,9 @@
     display: inline-block;
     border:1px solid grey;
     position: relative;
-    margin: 5px;
+    margin: 20px;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 
 
 }
@@ -26,10 +28,7 @@
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
 }
-#homecontent figure {
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
-}
+
 
 #homecontent figure a{
     text-decoration: none;

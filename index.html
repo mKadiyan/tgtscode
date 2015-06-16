@@ -60,9 +60,7 @@
         <div  id="leftpane" class="row col-md-2" ng-controller="leftPaneController">
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
-                    <h3>Home Data</h3>
                     <ul ng-repeat="content in contents | orderBy:orderField">
-                        <!--<li class="active"><a data-toggle="tab" href="#homedata1">Home Data1</a></li>-->
                         <li><a data-toggle="tab" href="#/{{topic}}/{{content.link}}">{{content.name}}</a></li>
                     </ul>
                 </div>

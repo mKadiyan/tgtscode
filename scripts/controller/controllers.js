@@ -15,7 +15,7 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
       {
         var text = '<div id="homecontent">';
         for (var i = 0; i < data.length; i++) {
-            text +='<figure style="display: inline-block"><a href="#'+data[i].id+'"><img class="thumbnail" src="'
+            text +='<figure><a href="#'+data[i].id+'"><img class="thumbnail" src="'
             text +=data[i].imageUrl+'" width="108px" height="90px">';
             text +='<figcaption>'+data[i].name+'</figcaption></a></figure>';
         }
