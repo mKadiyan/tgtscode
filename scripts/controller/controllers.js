@@ -7,6 +7,12 @@ var meharControllers = angular.module('meharControllers', []);
 meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Page','Tabs',
   function($scope, $routeParams, Page, Tabs) {
     $scope.contents={};
+
+    $('#toppanedata ul li a').click(function(){
+      $('#toppanedata ul li a').removeClass('selected');
+      $(this).addClass('selected')
+    })
+
     console.log('controller '+$routeParams.page1);
     if($routeParams.page1 === undefined || $routeParams.page1 === 'home')
     {
@@ -31,8 +37,13 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
       $("#leftpane").show();
       angular.element("#leftpane").scope().topic = $routeParams.page1;
       angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1});
+      $("#leftpane div ul:first-child li").addClass('selected');
     }
 
+    $scope.onclick = function ()
+    {
+
+    }
   }]);
 
 

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/mehar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-    <script src="http://ajax.googleapis.com/bootstrap/3.3.4/js/bootstrap.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
@@ -41,27 +41,28 @@
         </pre>
         </div>
 
-        <div class="col-dm-12">
+        <div id="toppanedata" class="col-dm-12">
             <ul class="nav nav-tabs">
-                <li><a data-toggle="tab" href="#home">Home</a></li>
-                <li><a data-toggle="tab" href="#css">Css</a></li>
-                <li><a data-toggle="tab" href="#angularjs">Angular</a></li>
-                <li><a data-toggle="tab" href="#bootstrap">Bootstrap</a></li>
-                <li><a data-toggle="tab" href="#jquery">Jquery</a></li>
-                <li><a data-toggle="tab" href="#bower">Bower</a></li>
-                <li><a data-toggle="tab" href="#npm">Npm</a></li>
-                <li><a data-toggle="tab" href="#others">Others</a></li>
+                <li><a  class="selected" href="#home">Home</a></li>
+                <li><a  href="#css">Css</a></li>
+                <li><a  href="#angularjs">Angular</a></li>
+                <li><a  href="#bootstrap">Bootstrap</a></li>
+                <li><a  href="#jquery">Jquery</a></li>
+                <li><a  href="#bower">Bower</a></li>
+                <li><a  href="#npm">Npm</a></li>
+                <li><a  href="#others">Others</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="row wrapper">
-        <div  id="leftpane" class="row col-md-2" ng-controller="leftPaneController">
-                <ul class="nav" ng-repeat="content in contents | orderBy:orderField">
-                    <li><a  ng-click ='display(topic,content.link)'>{{content.name}}</a></li>
-                </ul>
-        </div>
-
+    <div class="row" >
+        <div id="leftpane">
+            <div class="row col-md-2" ng-controller="leftPaneController">
+                    <ul class="nav nav-tabs" ng-repeat="content in contents | orderBy:orderField">
+                        <li id='{{content.link}}' ng-class='{selected:$first}' ng-click ='display(topic,content.link)'><a>{{content.name}}</a></li>
+                    </ul>
+            </div>
+       </div>
         <div id="middlepane" class="col-md-8">
 asad
         </div>

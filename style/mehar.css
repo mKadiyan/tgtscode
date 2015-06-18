@@ -2,7 +2,10 @@
 {
     margin-right: 10px;
 }
-
+#toppane
+{
+    padding-left: 0px;
+}
 #toppane > div > pre
 {
     background-color: #5cb85c;
@@ -51,13 +54,31 @@
 #leftpane
 {
     padding-right: 0px;
-    padding-left: 10px;
+    padding-left: 0px;
+    margin-left: 14px;
+
+}
+#leftpane div
+{
+    padding-right: 0px;
+    padding-left: 0px;
     border-right: 1px solid;
     border-color: darkred;
+    background-color:aliceblue;
 }
-#leftpane  ul.nav li
+
+#leftpane div ul.nav li
 {
-    background-color:linen;
+    width: 100%;
+}
+#leftpane div ul li a
+{
+    background-color: transparent;
+}
+
+#leftpane div ul li.selected
+{
+    background-color: darkseagreen;
 }
 
 #middlepane
@@ -74,10 +95,16 @@
 {
     /*border: 1px solid;*/
 }
-#toppane > div
+#toppanedata ul li .selected
 {
-    /*border: 1px solid;*/
+    background-color:darkkhaki !important;
 }
+
+#toppanedata ul li a:hover
+{
+    background-color:darkgray !important;
+}
+
 .modal-header, h4, .close
 {
     background-color: #5cb85c;
