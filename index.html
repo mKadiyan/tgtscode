@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/mehar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.js"></script>
+    <script src="http://ajax.googleapis.com/bootstrap/3.3.4/js/bootstrap.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
@@ -18,18 +18,9 @@
     <script src="scripts/services.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/shared.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#leftpane ul li a').click(function (ev) {
-                $('#leftpane ul li').removeClass('selected');
-                $(ev.currentTarget).parent('li').addClass('selected');
-            });
-        });
-    </script>
-
 </head>
 
-<body class="container-fluid">
+<body class="container">
     <ng-view></ng-view>
     <div id="headerpane" class="row">
         <form class="navbar-form navbar-right" role="search" action="http://www.google.com/search" target="_blank" method="get">
@@ -64,19 +55,19 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row wrapper">
         <div  id="leftpane" class="row col-md-2" ng-controller="leftPaneController">
                 <ul class="nav" ng-repeat="content in contents | orderBy:orderField">
                     <li><a  ng-click ='display(topic,content.link)'>{{content.name}}</a></li>
-         </ul>
+                </ul>
         </div>
 
         <div id="middlepane" class="col-md-8">
-
+asad
         </div>
 
         <div id="rightpane" class="col-md-2" >
-
+asasa
         </div>
     </div>
     <div id="footerpane" class="row" >
