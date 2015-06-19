@@ -1,0 +1,80 @@
+<div>
+    The Rule of Inheritance says that any child html tag automatically inherit the <code>css</code> properties from the parents.
+    if you don't want to use the inherited properties, then you have to override it.<br/>
+    Consider the below code :
+    <br/>
+    <code>mystyle.css</code>
+    <div class="code">
+        div
+        {
+          background-color:red;
+        }
+    </div>
+    <br/>
+    <code>index.html</code>
+    <div class="code">
+        &lt;html&gt;
+            &lt;title&gt;CSS Inheritance&lt;/title&gt;
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="mystyle.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div&gt;
+                    &lt;p&gt;I am Inheriting the parent property&lt;/p&gt;
+                    &lt;span&gt;I am also Inheriting the parent property&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;p&gt;I am not inheriting the parent property&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+    <div class="output">
+        <div style="background-color: red">
+            <p>I am Inheriting the parent property</p>
+            <span>I am also Inheriting the parent property</span>
+        </div>
+        <p>I am not heriting the parent property</p>
+    </div>
+
+    <br/>
+    Now let us try by overriding the of <code>span</code> tag in above example.<br/>
+    After changes ,our new <code>css</code> file will looks like this:
+    <br/>
+    <code>mystyle.css</code>
+    <div class="code">
+        div
+        {
+            background-color:red;
+        }
+        span
+        {
+             background-color:green;
+        }
+    </div>
+    <br/>
+    <code>index.html</code>
+    <div class="code">
+        &lt;html&gt;
+            &lt;title&gt;CSS Inheritance&lt;/title&gt;
+            &lt;head&gt;
+            &lt;link rel="stylesheet" href="mystyle.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div&gt;
+                    &lt;p&gt;I am Inheriting the parent property&lt;/p&gt;
+                    &lt;span&gt;I am overriding the parent property&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;p&gt;I am not inheriting the parent property&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+    <br/>
+    And the output of <code>index.html</code> will be : <br/>
+    <div class="output">
+        <div style="background-color: red">
+            <p>I am Inheriting the parent property</p>
+            <span style="background-color: green">I am overriding the parent property</span>
+        </div>
+        <p>I am not heriting the parent property</p>
+    </div>
+
+</div>
