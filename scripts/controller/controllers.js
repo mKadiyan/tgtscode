@@ -37,7 +37,7 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
         $('#toppanedata ul li a').removeClass('selected');
         $('#'+$routeParams.page1).addClass('selected');
         var subPage = data[0].link;
-        //TODO: bad solution below
+        //TODO: bad solution below. also check leftPaneController.js for this cookie
         var cookieName = $routeParams.page1+'meharSubtopic';
         if($.cookie(cookieName) != undefined)
         {

@@ -19,7 +19,7 @@
 					$("#middlepane").html(data[0]);
 					$('#leftpane div ul li').removeClass('selected');
 					$('#'+subtopic).addClass('selected');
-					//TODO: bad solution below
+					//TODO: bad solution below also check controller.js for this cookie
 					$.cookie(cookieName,subtopic );
 				});
 
