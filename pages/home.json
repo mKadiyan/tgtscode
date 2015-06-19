@@ -1,17 +1,17 @@
 [
     {
         "position": 1,
-        "imageUrl": "img/angular.jpg",
-        "name": "Angular JS",
-        "id": "angularjs",
-        "description": "Angular JS"
-    },
-    {
-        "position": 2,
         "imageUrl": "img/css.png",
         "name": "Css",
         "id": "css",
         "description": "CSS Styles"
+    },
+    {
+        "position": 2,
+        "imageUrl": "img/angular.jpg",
+        "name": "Angular JS",
+        "id": "angularjs",
+        "description": "Angular JS"
     },
     {
         "position": 3,
