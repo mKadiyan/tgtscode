@@ -29,11 +29,17 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
     else
     {
       $("#leftpane").show();
+
       angular.element("#leftpane").scope().topic = $routeParams.page1;
-      angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1});
-      $("#leftpane div ul:first-child li").addClass('selected');
-      $('#toppanedata ul li a').removeClass('selected');
-      $('#'+$routeParams.page1).addClass('selected');
+
+      angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1},function(data)
+      {
+        $("#leftpane div ul:first-child li").addClass('selected');
+        $('#toppanedata ul li a').removeClass('selected');
+        $('#'+$routeParams.page1).addClass('selected');
+        angular.element("#leftpane").scope().display($routeParams.page1,data[0].link);
+        return data;
+      });
     }
 
   }]);

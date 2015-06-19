@@ -6,7 +6,6 @@
 			$scope.orderField = 'position';
 			$scope.display = function(topic,subtopic)
 			{
-
 				$http({
 					method  : 'GET',
 					url     : 'pages/'+topic+'/'+subtopic+'.html',

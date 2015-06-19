@@ -66,8 +66,8 @@
     </div>
 
     <div class="row" >
-        <div id="leftpane">
-            <div class="row col-md-2" ng-controller="leftPaneController">
+        <div id="leftpane" ng-controller="leftPaneController">
+            <div class="row col-md-2" >
                     <ul class="nav nav-tabs" ng-repeat="content in contents | orderBy:orderField">
                         <li id='{{content.link}}' ng-class='{selected:$first}' ng-click ='display(topic,content.link)'><a>{{content.name}}</a></li>
                     </ul>
