@@ -8,15 +8,8 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
   function($scope, $routeParams, Page, Tabs) {
     $scope.contents={};
 
-    //$('#toppanedata ul li a').click(function(){
-    //  $('#toppanedata ul li a').removeClass('selected');
-    //  $(this).addClass('selected')
-    //})
-
-    console.log('controller '+$routeParams.page1);
     if($routeParams.page1 === undefined || $routeParams.page1 === 'home')
     {
-      console.log('I am here in controller  undefined-home '+$routeParams.page1);
       var data = Page.query(function(data)
       {
         var text = '<div id="homecontent">';
@@ -26,7 +19,6 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
             text +='<figcaption>'+data[i].name+'</figcaption></a></figure>';
         }
         text += "</div>"
-        console.log(text);
         $("#middlepane").html (text);
         $("#leftpane").hide();
         $('#toppanedata ul li a').removeClass('selected');
@@ -41,7 +33,7 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
       angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1});
       $("#leftpane div ul:first-child li").addClass('selected');
       $('#toppanedata ul li a').removeClass('selected');
-      $('#'+$routeParams.page1).addClass('selected')
+      $('#'+$routeParams.page1).addClass('selected');
     }
 
   }]);

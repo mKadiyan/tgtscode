@@ -11,7 +11,6 @@ var mehar = angular.module('mehar', [
 
 mehar.config(['$routeProvider',
   function($routeProvider) {
-    console.log('in route provider');
     $routeProvider.
         when('/', {
           templateUrl: 'templates/blankTemplate.html',
