@@ -18,24 +18,48 @@
         "position": 3,
         "imageUrl": "img/3.jpg",
         "name": "CSS3 With HTML5 ",
-        "link": "CSS3_With_HTML5"
+        "link": "CSS3_With_HTML5",
+        "next":"CSS3_Structure",
+        "previous":"The_benefits_of_CSS3"
     },
     {
         "position": 4,
         "imageUrl": "img/1.jpg",
-        "name": "Css More1",
-        "link": "css_more1"
-    },
-    {
-        "position": 5,
-        "imageUrl": "img/2.jpg",
-        "name": "Css More2",
-        "link": "css_more2"
+        "name": "CSS3 Structure",
+        "link": "CSS3_Structure",
+        "next":"CSS3_Inheritance",
+        "previous":"CSS3_With_HTML5"
     },
     {
         "position": 6,
+        "imageUrl": "img/2.jpg",
+        "name": "CSS3 Inheritance",
+        "link": "CSS3_Inheritance",
+        "next":"CSS3_Cascade",
+        "previous":"CSS3_Structure"
+    },
+    {
+        "position": 7,
+        "imageUrl": "img/2.jpg",
+        "name": "CSS3 Cascade",
+        "link": "CSS3_Cascade",
+        "next":"CSS3_Units",
+        "previous":"CSS3_Inheritance"
+    },
+    {
+        "position": 8,
         "imageUrl": "img/3.jpg",
-        "name": "Css More3",
-        "link": "css_more3"
+        "name": "CSS3 Units",
+        "link": "CSS3_Units",
+        "next":"CSS3_Cascade",
+        "previous":"CSS3_Inheritance"
+    },
+    {
+        "position": 9,
+        "imageUrl": "img/3.jpg",
+        "name": "CSS3 Selectors",
+        "link": "CSS3_Selectors",
+        "next":"CSS3_Inheritance",
+        "previous":"CSS3_With_HTML5"
     }
 ]
