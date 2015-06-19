@@ -9,7 +9,7 @@
     {
         "position": 2,
         "imageUrl": "img/2.jpg",
-        "name": "The benefits of CSS3",
+        "name": "The Benefits of CSS3",
         "link": "The_benefits_of_CSS3",
         "next":"CSS3_With_HTML5",
         "previous":"the_benefits_of_css3"

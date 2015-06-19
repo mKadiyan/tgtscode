@@ -181,6 +181,18 @@
 details p{
     background-color: rgba(246, 252, 153, 0.69);
 }
+.output:before
+{
+    content: "Output: ";
+    font-weight: bold;
+    text-decoration: underline;
+}
+.output
+{
+    background-color: gainsboro;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
 
 
