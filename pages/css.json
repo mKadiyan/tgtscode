@@ -2,21 +2,23 @@
     {
         "position": 1,
         "imageUrl": "img/1.jpg",
-        "name": "Introduction",
-        "link": "css_introduction",
+        "name": "CSS Introduction",
+        "link": "CSS_Introduction",
         "next":"the_benefits_of_css3"
     },
     {
         "position": 2,
         "imageUrl": "img/2.jpg",
         "name": "The benefits of CSS3",
-        "link": "the_benefits_of_css3"
+        "link": "The_benefits_of_CSS3",
+        "next":"CSS3_With_HTML5",
+        "previous":"the_benefits_of_css3"
     },
     {
         "position": 3,
         "imageUrl": "img/3.jpg",
-        "name": "Css More",
-        "link": "css_more"
+        "name": "CSS3 With HTML5 ",
+        "link": "CSS3_With_HTML5"
     },
     {
         "position": 4,

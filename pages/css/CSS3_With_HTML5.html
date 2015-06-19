@@ -1,0 +1,85 @@
+<div>
+For using <code>css</code> with html, we always have the option whether to embed the style within the <code>html</code> page or use external
+source.
+    Below are the usage example :<br/><br/>
+    <h3><u>Internal Stylesheet</u></h3>
+    <p>
+       In case of internal style sheet, we provide the css style code inside the <code>html</code> page only. Below is the example:<br/>
+        <div class="code">
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;lt;/title&gt;
+                    &lt;style type="text/css"&gt;
+                                h1,h2
+                                {
+                                    text-align: center;
+                                }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+            &lt;/html&gt;
+        </div>
+    </p>
+    <h3><u>External Stylesheet</u></h3>
+    External stylesheets provide us a better way to keep the <code>style</code> and <code>html</code> concern separate.It's always good to keep these
+    concern separatly.You can create the external <code>css</code> file using any text editor and save the file using <code>.css</code> extension.
+    <br/><br/>
+    External stylesheet for a html page can be achieve in two ways. Using <code>style</code> and <code>link</code>.
+    Below are the examples:
+    <br/><br/>
+    <code>mystyle.css</code>
+    <div class="code">
+        .notes
+        {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: lightgreen;
+        }
+
+        .code
+        {
+        white-space: pre;
+        background-color: antiquewhite;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        color: brown;
+        }
+
+        details p{
+        background-color: rgba(246, 252, 153, 0.69);
+        }
+    </div>
+    <br/>
+    <code>index_style.html</code>
+    <div class="code">
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;lt;/title&gt;
+                &lt;style type="text/css"&gt;@import url('mystyle.css')&lt;/style&gt;
+            &lt;/head&gt;
+        &lt;/html&gt;
+    </div>
+    <br/>
+    <code>index_link.html</code>
+    <div class="code">
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;lt;/title&gt;
+                &lt;style type="text/css" href="mystyle.css"&gt;&lt;/style&gt;
+            &lt;/head&gt;
+        &lt;/html&gt;
+    </div>
+    <br/>
+    <details>
+        <summary>Difference between css <code>style</code> and <code>link</code></summary>
+        <p><code>style</code> import the external stylesheet and merge with the html page while <code>link</code> just provide the
+        reference of the external style sheet and keeps the <code>style</code> and <code>html</code> code separate.</p>
+    </details>
+    <p>
+
+
+    </p>
+
+
+
+    <div class="notes">It's always recommended to use a separate file for style instead of using the embed one.This helps in maintainance.</div>
+</div>

@@ -84,8 +84,11 @@
 #middlepane
 {
     margin-left: 20px;
+    margin-top: 20px;
 }
-#middlepane div h1,h2
+
+
+#middlepane div h1,h2,h3,h4
 {
     margin: 0px;
 }
@@ -153,9 +156,31 @@
     background-color: rgba(246, 252, 153, 0.69);
 }
 
+.notes:before {
+    content: "Note: ";
+    color: brown;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.notes
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+}
 
+.code
+{
+    white-space: pre;
+    background-color: beige;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: brown;
+}
 
-
+details p{
+    background-color: rgba(246, 252, 153, 0.69);
+}
 
 
 
