@@ -83,7 +83,11 @@
 
 #middlepane
 {
-
+    margin-left: 20px;
+}
+#middlepane div h1,h2
+{
+    margin: 0px;
 }
 #rightpane
 {
@@ -120,6 +124,35 @@
     border-color: darkred;
 
 }
+.meharOne
+{
+    margin: 15px 15px;
+}
+
+.meharOne details summary
+{
+    /*padding-top: 3px;*/
+}
+
+.meharOne details summary
+{
+    font-size: medium;
+}
+.meharOne details ul li
+{
+    list-style-type: square;
+    background-color: rgba(246, 252, 153, 0.69);
+    color: brown;
+}
+.meharOne details ul
+{
+    padding-left: 20px;
+}
+.meharOne details p
+{
+    background-color: rgba(246, 252, 153, 0.69);
+}
+
 
 
 

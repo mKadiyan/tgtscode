@@ -2,14 +2,15 @@
     {
         "position": 1,
         "imageUrl": "img/1.jpg",
-        "name": "Css Introduction",
-        "link": "css_introduction"
+        "name": "Introduction",
+        "link": "css_introduction",
+        "next":"the_benefits_of_css3"
     },
     {
         "position": 2,
         "imageUrl": "img/2.jpg",
-        "name": "Css Styles",
-        "link": "css_styles"
+        "name": "The benefits of CSS3",
+        "link": "the_benefits_of_css3"
     },
     {
         "position": 3,
