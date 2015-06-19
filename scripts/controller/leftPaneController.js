@@ -15,9 +15,12 @@
 						return $.parseHTML(data);
 					}
 				}).success(function(data, status, headers, config) {
+					var cookieName = topic+'meharSubtopic';
 					$("#middlepane").html(data[0]);
 					$('#leftpane div ul li').removeClass('selected');
 					$('#'+subtopic).addClass('selected');
+					//TODO: bad solution below
+					$.cookie(cookieName,subtopic );
 				});
 
 			};

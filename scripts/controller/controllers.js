@@ -34,10 +34,20 @@ meharControllers.controller('TopPaneController', ['$scope', '$routeParams', 'Pag
 
       angular.element("#leftpane").scope().contents = Tabs.query({page1: $routeParams.page1},function(data)
       {
-        $("#leftpane div ul:first-child li").addClass('selected');
         $('#toppanedata ul li a').removeClass('selected');
         $('#'+$routeParams.page1).addClass('selected');
-        angular.element("#leftpane").scope().display($routeParams.page1,data[0].link);
+        var subPage = data[0].link;
+        //TODO: bad solution below
+        var cookieName = $routeParams.page1+'meharSubtopic';
+        if($.cookie(cookieName) != undefined)
+        {
+          subPage = $.cookie(cookieName);
+        }
+
+
+        $("#leftpane div ul:first-child li").addClass('selected');
+        angular.element("#leftpane").scope().display($routeParams.page1,subPage);
+
         return data;
       });
     }
