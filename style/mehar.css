@@ -183,6 +183,23 @@ body
     margin-bottom: 0px;
     margin-top: 0px;
     color: brown;
+    border: solid;
+    border-width: 1px;
+    border-left-width: 3px;
+    border-color: #ffb95b;
+    /*border-left-color: blue;*/
+
+}
+#middlepane pre
+{
+    white-space: pre;
+    background-color: rgb(241, 244, 130);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: brown;
+    border: solid;
+    border-width: 1px;
+    border-color: #ffb95b;
 }
 
 details p{

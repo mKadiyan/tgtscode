@@ -1,0 +1,255 @@
+<div>
+Cascading is one of the important , backbone and fundamental feature of <code>css</code>.Its the cascading rule that define what should be the final value of
+    any property used by the page.
+    <br/>
+    Since we start discussing <code>cascading</code>, Its the right time to introduce a flag <code>!important</code>.
+    This flag enforce that the author style property can't be override in normal way.if user want to override any author property marked with
+     <code>!important</code>, then user has to use the <code>!important</code> flag while overriding.
+    <br/>
+    <br/>
+       While overriding any property, cascading work as follows(<strong>1 is least important and 5 is most important</strong>)
+    <ol>
+        <li>User agent styles (default styles provided by web browser etc.)</li>
+        <li>User styles</li>
+        <li>Author styles (style library eg. bootstrap.css)</li>
+        <li>Author styles flagged as <code>!important</code></li>
+        <li>User styles flagged as <code>!important</code></li>
+    </ol>
+    <div class="notes">
+        The <strong>user agent</strong> is the application where web page is opened (usually a browser, such as IE, Chrome or Firefox) that you are viewing the website with.
+        User agents have a default stylesheet. You can inspect its properties with a tool like Chrome's Developer Tools feature.
+        <br/><br/>
+        The <strong>"reader" or "user"</strong> is the web surfer viewing your site. Your site's visitors can set their own stylesheets or custom rules (such as system colours or font preferences).
+
+        <br/><br/>
+        The <strong>author's</strong> stylesheet is the one explicitly linked to in the HTML of the website itself. i.e., it's the one that you created.
+    </div>
+    <br/><br/>
+    After parsing of the document, user agent construct a <strong>DOM</strong> tree .After the <strong>DOM</strong> construction, user agent must
+    assign the value for each property that are applicable to target media type.
+       <br/><br/>
+        The final value of a property is calculated in four steps:
+    <br/> <br/>
+    <details><summary>First, value is determined through specification called <code>specified value</code></summary>
+        <p>User agents must first assign a specified value to each property based on the following mechanisms (in order of precedence):</p>
+        <ol>
+        <li>If the cascade result give a value, use this value.</li>
+        <li>Otherwise, if the any property is inherited and the element is not the root of the document tree, use the
+                computed value of the parent element.</li>
+        <li>Otherwise use the property's initial value.
+                The initial value of each property is indicated in the property's definition.</li>
+        </ol>
+    </details>
+    <details><summary>Second, resolved into a value that is used for inheritance called<code>computed value</code>
+    </summary>
+        <p>
+        Specified values are resolved to computed values during the cascade; for example URIs are made absolute and 'em' and 'ex' units are computed to pixel or absolute lengths. Computing a value never requires the user agent to render the document.
+        <br/><br/>
+        The computed value of URIs that the UA cannot resolve to absolute URIs is the specified value.
+            <br/><br/>
+        The computed value of a property is determined as specified by the Computed Value line in the definition of the property.
+        <br/><br/>
+        The computed value exists even when the property does not apply, as defined by the 'Applies To' line. However, some properties may define the computed
+             value of a property for an element to depend on whether the property applies to that element.
+        </p>
+    </details>
+    <details><summary>Third, converted into an absolute value if necessary called<code>used value</code></summary>
+        <p>Computed values are processed as far as possible without formatting the document. Some values, however,
+            can only be determined when the document is being laid out. For example, if the width of an element is set to be a certain percentage of its
+            containing block/parent, the width can't be determined until the width of the containing block/parent is determined.
+        The used value is the result of taking the computed value and resolving any remaining dependencies into an absolute value.</p>
+    </details>
+    <details><summary>And Four, finally transformed according to the limitations of the local environment called <code>actual value</code></summary>
+        <p>A used value is the value used for rendering of element, but a user agent may not be able to make use of this value in a given environment.
+            e.g , a user agent may only be able to render borders with integer pixel widths and may therefore have to approximate the computed width,
+            or the user agent may have to use only black and white shades instead of full color.
+        At the end , actual value is the used value after any approximations/adjustments have been applied.</p>
+    </details>
+    <br/><br/>
+    <h3><u>Inheritance Rules</u></h3><br/>
+    The Rule of Inheritance says that any child html tag automatically inherit the <code>css</code> properties from the parents.
+    if you don't want to use the inherited properties, then you have to override it.<br/>
+    Consider the below code :
+    <br/>
+    <code>mystyle.css</code>
+    <div class="code">
+        div
+        {
+        background-color:red;
+        }
+    </div>
+    <br/>
+    <code>index.html</code>
+    <div class="code">
+        &lt;html&gt;
+            &lt;title&gt;CSS Inheritance&lt;/title&gt;
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="mystyle.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div&gt;
+                &lt;p&gt;I am Inheriting the parent property&lt;/p&gt;
+                &lt;span&gt;I am also Inheriting the parent property&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;p&gt;I am not inheriting the parent property&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+    <div class="output">
+        <div style="background-color: red">
+            <p>I am Inheriting the parent property</p>
+            <span>I am also Inheriting the parent property</span>
+        </div>
+        <p>I am not heriting the parent property</p>
+    </div>
+
+    <br/>
+    Now let us try by overriding the of <code>span</code> tag in above example.<br/>
+    After changes ,our new <code>css</code> file will looks like this:
+    <br/>
+    <code>mystyle.css</code>
+    <div class="code">
+        div
+        {
+        background-color:red;
+        }
+        span
+        {
+        background-color:green;
+        }
+    </div>
+    <br/>
+    <code>index.html</code>
+    <div class="code">
+        &lt;html&gt;
+            &lt;title&gt;CSS Inheritance&lt;/title&gt;
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="mystyle.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;div&gt;
+                &lt;p&gt;I am Inheriting the parent property&lt;/p&gt;
+                &lt;span&gt;I am overriding the parent property&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;p&gt;I am not inheriting the parent property&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+    <br/>
+    And the output of <code>index.html</code> will be : <br/>
+    <div class="output">
+        <div style="background-color: red">
+            <p>I am Inheriting the parent property</p>
+            <span style="background-color: green">I am overriding the parent property</span>
+        </div>
+        <p>I am not heriting the parent property</p>
+    </div>
+    <br/><br/>
+    Another thing to understand here about the inheritance while dealing with <code>units</code>.(<i>In next chapter we will understand <code>units</code> in detail</i>).
+    In some cases,inheritance don't override the parent value but manipulate the parent value with the overriding one.
+    <br/>
+    Consider the below style :
+    <div class="code">
+        body { font-size: 10pt }
+        h2 { font-size: 140% }
+    </div>
+    <br/>
+    In above style, <code>body</code> has <code>font-size</code> of 10pt and inside the <code>body</code> we have <code>h2</code>. So how the inheritance work here?
+    <br/>
+    Since here the unit of <code>h2</code> is not concrete but relative. So as per the inheritance rule, <code>h2</code> will inherit the <code>font-size</code>
+    from <code>body</code> and apply it's own value i.e. 140% of <code>font-size</code> set for <code>body</code> tag. So the final <code>font-size</code> of
+    <code>h2</code> will be 14pt.
+    <br/><br/>
+
+
+    <h3><u><code>!important</code>rules</u></h3><br/>
+    This rule provide some balance of power between the user's and author's styles. As you have already seen, by default author's styles can override the
+    user's style(see Rule 3 above). So how can user override the author's style? Answer is using <code>!important</code> flag. Below example will make it
+    more clear :
+    <br/>
+    <div class="code">
+        /* From the user's style sheet */
+        p { text-indent: 1em ! important } //property 1
+        p { font-size: 20pt } //property 2
+
+        /* From the author's style sheet */
+        p { text-indent: 1.2em !important } //property 1
+        p { font-size: 26pt } //property 2
+    </div>
+    In the above example , property 1 of the user style sheet will have the preference over author's property 1 because user has marked the
+    property 1 with <code>!important</code> flag. but since for the property 2 , user didn't mark with <code>!important</code> flag, so in this
+    case author's property 2 will have the preference.
+    <br/><br/>
+    <h3><u>Specificity Rules</u></h3><br>
+    <p>Specificity is the way by which any browser conclude which
+        CSS property values are the most relevant/specific to an element and therefore will be applied. This is usually calculated using selectors
+      (In coming chapters we will  go in details of selector).</p>
+    In other words, specificity is the weight of the property applied to any selector. More specific the css property, more waitage it will gain.
+    <br/><br/>For example, consider the below self explanatory code :
+    <div class="code">
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;style&gt;
+                p {
+                color: red;
+                }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p style="color: blue"&gt;
+                I am blue because in line style is more specific.
+                &lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+    <br/>
+    <u>Below is the specificity criteria based on selectors: (<strong>1 is least specific and 7 is most specific</strong>)</u><br><br>
+    <ol>
+        <li>Universal selectors (e.g., *)</li>
+        <li>Type selectors (e.g., body p h1)</li>
+        <li>Class selectors (e.g., .myclass)</li>
+        <li>Attributes selectors (e.g., [type="button"])</li>
+        <li>Pseudo-classes (e.g., :hover)</li>
+        <li>ID selectors (e.g., #myId)</li>
+        <li>Inline style (e.g., style="color:red")</li>
+    </ol>
+    <br/>
+    Although above criteria is the fundamental way of calculating the specificity but it's not absolute.It comes with few exception :
+    <br/>
+    <code>!important exception</code>: As per this exception, property set with <code>!important</code> flag will always be given the preference
+    regardless of the above criteria. If there is conflict i.e. <code>!important</code> flag is applied at more than one place for a specific selector,
+    then final value will again be as per the above criteria.
+    <br/>
+    <br/>
+    <code> :not exception </code> :The negation pseudo-class <code>:not</code> is actually not considered a pseudo-class while calculating the
+    specificity.
+    But selectors on which negation pseudo-class  is applied count as normal selectors when determining the count of selector types.
+    <br/>
+    For Example , Consider the below code :
+    <br/><code>mystyle.css</code>
+    <div class="code">
+        div.one p {
+        color:red;
+        }
+        div:not(.one) p {
+        color: blue;
+        }
+    </div>
+    <br/><code>Html</code>
+    <div class="code">
+        &lt;div class="one"&gt;
+            &lt;p&gt;This is one.&lt;/p&gt;
+            &lt;div class="two"&gt;
+                &lt;p&gt;This is two.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </div>
+    <div class="output">
+        <div style="color: red">
+            <p>This is one.</p>
+            <div style="color: blue">
+                <p>This is two.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -33,21 +33,13 @@
     {
         "position": 5,
         "imageUrl": "img/2.jpg",
-        "name": "CSS3 Cascade",
-        "link": "CSS3_Cascade",
-        "next":"CSS3_Inheritance",
+        "name": "CSS3 Cascade And Inheritance",
+        "link": "CSS3_Cascade_And_Inheritance",
+        "next":"CSS3_Units",
         "previous":"CSS3_Structure"
     },
     {
         "position": 6,
-        "imageUrl": "img/2.jpg",
-        "name": "CSS3 Inheritance",
-        "link": "CSS3_Inheritance",
-        "next":"CSS3_Units",
-        "previous":"CSS3_Cascade"
-    },
-    {
-        "position": 7,
         "imageUrl": "img/3.jpg",
         "name": "CSS3 Units",
         "link": "CSS3_Units",
@@ -55,7 +47,7 @@
         "previous":"CSS3_Inheritance"
     },
     {
-        "position": 8,
+        "position": 7,
         "imageUrl": "img/3.jpg",
         "name": "CSS3 Selectors",
         "link": "CSS3_Selectors",
