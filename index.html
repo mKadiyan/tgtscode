@@ -60,7 +60,6 @@
                 <li><a  id="jquery" href="#jquery">Jquery</a></li>
                 <li><a  id="bower" href="#bower">Bower</a></li>
                 <li><a  id="npm" href="#npm">Npm</a></li>
-                <li><a  id="others" href="#others">Others</a></li>
             </ul>
         </div>
     </div>
@@ -69,7 +68,8 @@
         <div id="leftpane" ng-controller="leftPaneController">
             <div class="row col-md-2" >
                     <ul class="nav nav-tabs" ng-repeat="content in contents | orderBy:orderField">
-                        <li id='{{content.link}}' ng-class='{selected:$first}' ng-click ='display(topic,content.link)'><a>{{content.name}}</a></li>
+                        <li id='{{content.link}}' ng-class='{selected:$first}'>
+                            <a href="#{{topic}}/{{content.link}}">{{content.name}}</a></li>
                     </ul>
             </div>
        </div>

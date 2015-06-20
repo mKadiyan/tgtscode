@@ -20,6 +20,10 @@ mehar.config(['$routeProvider',
           templateUrl: 'templates/blankTemplate.html',
           controller: 'TopPaneController'
         }).
+        when('/:page1/:page2', {
+            templateUrl: 'templates/blankTemplate.html',
+            controller: 'TopPaneController'
+        }).
       otherwise({
         redirectTo: '/'
       });

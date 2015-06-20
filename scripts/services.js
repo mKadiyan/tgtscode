@@ -17,11 +17,3 @@ meharServices.factory('Tabs', ['$resource',
       query: {method:'GET', params:{page1: ':page1' }, isArray:true}
     });
   }]);
-meharServices.factory('SubTabs', ['$resource',
-  function($resource){
-    return $resource('pages/:tab/:subtab.html', {}, {
-      query: {method:'GET', transformResponse : function(response) {
-        return $.parseHTML(response);
-      }}
-    });
-  }]);
