@@ -27,39 +27,39 @@
         "imageUrl": "img/1.jpg",
         "name": "CSS3 Structure",
         "link": "CSS3_Structure",
-        "next":"CSS3_Inheritance",
+        "next":"CSS3_Cascade",
         "previous":"CSS3_With_HTML5"
+    },
+    {
+        "position": 5,
+        "imageUrl": "img/2.jpg",
+        "name": "CSS3 Cascade",
+        "link": "CSS3_Cascade",
+        "next":"CSS3_Inheritance",
+        "previous":"CSS3_Structure"
     },
     {
         "position": 6,
         "imageUrl": "img/2.jpg",
         "name": "CSS3 Inheritance",
         "link": "CSS3_Inheritance",
-        "next":"CSS3_Cascade",
-        "previous":"CSS3_Structure"
+        "next":"CSS3_Units",
+        "previous":"CSS3_Cascade"
     },
     {
         "position": 7,
-        "imageUrl": "img/2.jpg",
-        "name": "CSS3 Cascade",
-        "link": "CSS3_Cascade",
-        "next":"CSS3_Units",
+        "imageUrl": "img/3.jpg",
+        "name": "CSS3 Units",
+        "link": "CSS3_Units",
+        "next":"CSS3_Selectors",
         "previous":"CSS3_Inheritance"
     },
     {
         "position": 8,
         "imageUrl": "img/3.jpg",
-        "name": "CSS3 Units",
-        "link": "CSS3_Units",
-        "next":"CSS3_Cascade",
-        "previous":"CSS3_Inheritance"
-    },
-    {
-        "position": 9,
-        "imageUrl": "img/3.jpg",
         "name": "CSS3 Selectors",
         "link": "CSS3_Selectors",
         "next":"CSS3_Inheritance",
-        "previous":"CSS3_With_HTML5"
+        "previous":"CSS3_Units"
     }
 ]

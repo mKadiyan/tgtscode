@@ -1,0 +1,59 @@
+<div>
+Cascading is one of the important , backbone and fundamental feature of <code>css</code>.Its the cascading rule that define what should be the final value of
+    any property used by the page.
+    <br/>
+    Since we start discussing <code>cascading</code>, Its the right time to introduce a flag <code>!important</code>.
+    This flag enforce that the author style property can't be override in normal way.if user want to override any author property marked with
+     <code>!important</code>, then user has to use the <code>!important</code> flag while overriding.
+    <br/>
+    <br/>
+       While overriding any property, cascading work as follows(<strong>1 is least important and 5 is most important</strong>)
+    <ol>
+        <li>User agent styles (default styles provided by web browser etc.)</li>
+        <li>User styles</li>
+        <li>Author styles (style library eg. bootstrap.css)</li>
+        <li>Author styles flagged as <code>!important</code></li>
+        <li>User styles flagged as <code>!important</code></li>
+    </ol>
+    <br/><br/>
+    After parsing of the document, user agent construct a <strong>DOM</strong> tree .After the <strong>DOM</strong> construction, user agent must
+    assign the value for each property that are applicable to target media type.
+       <br/><br/>
+        The final value of a property is calculated in four steps:
+    <br/> <br/>
+    <details><summary>First, value is determined through specification called <code>specified value</code></summary>
+        <p>User agents must first assign a specified value to each property based on the following mechanisms (in order of precedence):</p>
+        <ol>
+        <li>If the cascade result give a value, use this value.</li>
+        <li>Otherwise, if the any property is inherited and the element is not the root of the document tree, use the
+                computed value of the parent element.</li>
+        <li>Otherwise use the property's initial value.
+                The initial value of each property is indicated in the property's definition.</li>
+        </ol>
+    </details>
+    <details><summary>Second, resolved into a value that is used for inheritance called<code>computed value</code>
+    </summary>
+        <p>
+        Specified values are resolved to computed values during the cascade; for example URIs are made absolute and 'em' and 'ex' units are computed to pixel or absolute lengths. Computing a value never requires the user agent to render the document.
+        <br/><br/>
+        The computed value of URIs that the UA cannot resolve to absolute URIs is the specified value.
+            <br/><br/>
+        The computed value of a property is determined as specified by the Computed Value line in the definition of the property.
+        <br/><br/>
+        The computed value exists even when the property does not apply, as defined by the 'Applies To' line. However, some properties may define the computed
+             value of a property for an element to depend on whether the property applies to that element.
+        </p>
+    </details>
+    <details><summary>Third, converted into an absolute value if necessary called<code>used value</code></summary>
+        <p>Computed values are processed as far as possible without formatting the document. Some values, however,
+            can only be determined when the document is being laid out. For example, if the width of an element is set to be a certain percentage of its
+            containing block/parent, the width can't be determined until the width of the containing block/parent is determined.
+        The used value is the result of taking the computed value and resolving any remaining dependencies into an absolute value.</p>
+    </details>
+    <details><summary>And Four, finally transformed according to the limitations of the local environment called <code>actual value</code></summary>
+        <p>A used value is the value used for rendering of element, but a user agent may not be able to make use of this value in a given environment.
+            e.g , a user agent may only be able to render borders with integer pixel widths and may therefore have to approximate the computed width,
+            or the user agent may have to use only black and white shades instead of full color.
+        At the end , actual value is the used value after any approximations/adjustments have been applied.</p>
+    </details>
+</div>

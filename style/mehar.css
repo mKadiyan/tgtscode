@@ -1,3 +1,9 @@
+body
+{
+    font-family: sans-serif;
+    font-size: 15px;
+
+}
 #headerpane > div > form.navbar-right
 {
     margin-right: 10px;
@@ -195,4 +201,29 @@ details p{
     margin-top: 10px;
 }
 
+#middlepane div ul
+{
+    list-style-type: square;
+    margin-left: 30px;
+    font-size: 17px;
+    text-decoration: solid red;
+}
 
+#middlepane div ol
+{
+    list-style-type: decimal;
+    margin-left: 30px;
+    font-size: 17px;
+    text-decoration: solid red;
+}
+#middlepane div details ol
+{
+    background-color: rgba(246, 252, 153, 0.69);
+    color: brown;
+}
+#middlepane div details p
+{
+    background-color: rgba(246, 252, 153, 0.69);
+    color: brown;
+    margin-left: 10px;
+}
